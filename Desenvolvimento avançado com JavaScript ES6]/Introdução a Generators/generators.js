@@ -1,18 +1,21 @@
 'use strict';
-
-function* hello(){
+ 
+ // Generators:  pode gerar e construir a interface de geração do objetos.
+ 
+function* hello(){ // o * influência nisto
   console.log('Hello');
-  yield 1;
+  yield 1; // consegue pausar e execultar em partes
   console.log('From');
   yield 2;
   console.log('Function');
+
   const valor = yield 3;
   console.log(valor);
 }
 
 const it = hello();
 
-console.log(it.next());
+console.log(it.next()); // faz básicamnte a mesma coisa, consegue pausar e execultar em partes
 console.log(it.next());
 console.log(it.next());
 console.log(it.next('vlr Outside'));
@@ -20,6 +23,7 @@ console.log(it.next('vlr Outside'));
 
 function* naturalNumbers(){
   let number = 0;
+
   while(true){
     let res = yield number;
     number++;
@@ -51,3 +55,5 @@ const objetoGenerator = {
 for(let value of objetoGenerator){
   console.log(value);
 }
+
+// pode também usar o generators como uma forma de construir interadores.

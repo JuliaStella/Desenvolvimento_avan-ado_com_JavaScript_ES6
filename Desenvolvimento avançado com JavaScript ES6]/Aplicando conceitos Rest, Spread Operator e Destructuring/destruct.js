@@ -1,23 +1,27 @@
-//Antigamente...
+// Modo antigo
+
 var arr = ['Apple','Banana','Orange',['tomato']];
+
 var apple = arr[0];
 var banana = arr[1];
 var orange = arr[2];
 var tomato = arr[3][0];
+
 
 var arr2 = [{nome:'Apple',type:'fruit',color:['green','red']},{nome:'Banana',type:'fruit',color:['green','yellow']},{nome:'Orange',type:'fruit',color:['green','orange']},{nome:'tomato',type:'fruit',color:'red'}];
 var fruit1 = arr2[0].nome;
 const {nome} = arr2[2];
 console.log(fruit1,nome);
 
-//Destructuring Assignment
-const [apple2, banana2, orange2, [tomato2]] = ['Apple','Banana','Orange',['tomato']];
+// Destructuring Assignment
+
+const [apple2, banana2, orange2, [tomato2]] = ['Apple','Banana','Orange',['tomato']]; // Uma forma melhor de se fazer o código da var arr
 
 const obj = {
   name: 'Tomas Edson',
   props:{
     age:26,
-    colors:['black','blue'] //atenção ao misturar objeto com array
+    colors:['green','black'] //atenção ao misturar objeto com array
   }
 }
 const {name} = obj;
@@ -30,6 +34,16 @@ console.log(tomato,tomato2);
 console.log(obj.name,name,name2);
 console.log(age2);
 console.log(c1);
+
+// functions
+
+function sum(arr) {
+  return arr[0] + arr[1];
+}
+
+console.log(sum([5, 5]));
+
+// outra forma de fazer
 
 const somaLog = ({a,b}) => console.log(`resultado da soma de {a:${a}, b:${b}} é: ${a+b}`);
 somaLog({a:3,b:10}); //chamando a função de soma passando um objeto como parametro

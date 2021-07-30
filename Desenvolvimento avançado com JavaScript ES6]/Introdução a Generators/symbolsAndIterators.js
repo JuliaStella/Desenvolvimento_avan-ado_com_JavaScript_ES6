@@ -1,29 +1,39 @@
 'use strict';
 
-//symbols, sempre são únicos por mais iguais que pareçam;
-const uniqueId = Symbol('Hello');
-const uniqueId2 = Symbol('Hello');
+// Symbols, sempre são únicos por mais iguais que pareçam;
+
+const uniqueId = Symbol('Hi Lorena');
+
+const uniqueId2 = Symbol('Hi, are you ?');
+
 console.log(typeof uniqueId,uniqueId);
 console.log(typeof uniqueId2,uniqueId2);
 console.log(uniqueId === uniqueId2);
 
 /**
- * pode ser usado o symbol para construir um modulo de segurança qual só acessa quem possui o symbol
+ * Pode ser usado o symbol para construir um modulo de segurança qual só acessa quem possui o symbol
  * Object.getOwnPropertySymbols(obj) //retorna o symbol
  * Object.keys(obj) //sem retorno, symbol não aparece com chave
- * utilização: dar comportamento de methodos Symbol para Objetos que não as possui...
+ * Utilização: dar comportamento de methodos Symbol para Objetos que não as possui...
  */
+
 const obj = {
   [uniqueId] : 'Hello'
 };
 console.log(obj);
-/**
+
+/** Nell known symbols : são algumas das propriedades que se podem dar ao symbols.
+
  * Symbol.iterator
  * Symbol.split
  * Symbol.toStringTag
  */
+
+// Symbol.iterator
+
 const arr = [1,2,3,4];
-const itr = arr[Symbol.iterator]();
+
+const itr = arr[Symbol.iterator](); // O interador é uma interface para você consumir passo a passo uma lista/estrutura de dados.
 
 do{
   let { value, done : stop } = itr.next();

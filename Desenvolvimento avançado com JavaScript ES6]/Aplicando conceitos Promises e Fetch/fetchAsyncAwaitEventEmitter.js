@@ -3,9 +3,10 @@
  * só vai acusar erros no catch se for erros de rede.
  * caso contrario não cai no catch...
  */ 
-//fetch('./data1.json',{method: 'POST',headers: '',body: JSON.stringify(data) });
-fetch('./data.json')
-.then(responseStream =>{
+
+// Fetch('./data1.json',{method: 'POST',headers: '',body: JSON.stringify(data) });
+
+fetch('./data.json').then(responseStream =>{
     if (responseStream.status === 200){
       console.log(responseStream);
       // return responseStream.json().then(data=>{console.log(data);});
@@ -19,7 +20,8 @@ fetch('./data.json')
   })
 .catch(error => console.log('ixi deu erro...: ', error));
 
-//ES7 - Async / Await
+// ES7 - Async: uma forma de criar promises de maneira mais simples. 
+// Await : espera que outras promises sejam resovidas.
 
 const simpleFunc2 = async () => new Promise((resolve, reject) => {
   setTimeout(() =>{
@@ -36,7 +38,8 @@ const data = await simpleFunc2();
 simpleFunc().then(data => console.log(data)).catch(error => console.log('ixi deu erro...: ', error));
 
 
-//EventEmitter - NODE
+// EventEmitter - NODE
+
 const EventEmitter = require('events');
 
 const emitter = new EventEmitter();

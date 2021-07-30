@@ -1,26 +1,78 @@
-//PROMISSES
+// Callback
+
+function doSomething(callback) {
+  setTimeout(function() {
+    // did something/fez algo
+    callback('Nada')
+  }, 1000);
+}
+
+function doOtherThing(callback) {
+  setTimeout(function() {
+    // did other thing//fez outra coisa
+    callback('Será mesmo')
+  }, 1000);
+}
+
+function doAll() { // sendo que essa função acaba ficando muito complicada.
+
+  try{ 
+doSomething(function (data) {
+    var processedData = data.split('');
+  try{ // acaba filtrando
+    doOtherThing(function (data2) {
+    var processedData2 = data2.split('');
+  try { 
+    setTimeout(function(data) {
+      console.log(processedData, processedData2);
+    }, 1000);
+
+    } catch (err){}
+  });
+  
+  } catch (err){}
+
+ });
+
+ } catch (err){}
+}
+
+doAll();
+
+// Fazer novamente o código acima com promisses, "fica mais facil".
 
 const facaAlgoPromisse = () => new Promise((resolve,reject)=> {
   //throw new Error ('algo promisse esta errado...');
   setTimeout(function(){
-    resolve('Primeiro dado Promisse');
+    resolve('Nada');
   },1100);
 });
-
+  
 const facaOutroPromisse = () => new Promise((resolve,reject)=> {
   //throw new Error ('algo promisse esta errado...');
   setTimeout(function(){
-    resolve('Segundo dado Promisse');
+    resolve('Será mesmo');
   },1000);
 });
 
-//processamento sequencial
+// Processamento sequencial
+
 facaAlgoPromisse()
 .then(data => {console.log(data.split('')); return facaOutroPromisse()})
 .then(data => console.log(data.split('')))
 .catch(error => console.log('ixi deu erro...: ', error));
 
-//processamento paralelo
+
+/* OBS: uma promisse pode ter três status
+
+ - Pending: quando estar pendente(em execução);
+ - Fulfilled:
+ - Rejected:
+
+ */
+
+// Processamento paralelo
+
 Promise.all([facaAlgoPromisse(),facaOutroPromisse()])
 .then((data) => {
   console.log("==============================================");
@@ -28,7 +80,8 @@ Promise.all([facaAlgoPromisse(),facaOutroPromisse()])
 })
 .catch(error => console.log('ixi deu erro...: ', error));
 
-//processamento concorrente, quem resolver primeiro retorna os valores
+// processamento concorrente, quem resolver primeiro retorna os valores
+
 Promise.race([facaAlgoPromisse(),facaOutroPromisse()])
 .then((data) => {
   console.log("==============================================");
@@ -36,7 +89,7 @@ Promise.race([facaAlgoPromisse(),facaOutroPromisse()])
 })
 .catch(error => console.log('ixi deu erro...: ', error));
 
-//CALBACK
+// Calback
 
 
 function facaAlgo(callback){
