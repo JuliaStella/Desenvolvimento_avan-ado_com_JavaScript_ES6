@@ -1,2 +1,1 @@
-# Projetinho
-Trabalho para diversão
+Funções avançadas do ES6, @digitalinnovation.one.
