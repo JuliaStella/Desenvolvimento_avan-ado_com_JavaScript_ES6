@@ -1,10 +1,18 @@
 # Testes
 
+* TDD Contínuo: responsividade
+
+    Praticar TDD Contínuo significa que você verá o 
+resultado da execução dos testes do seu projeto sem precisar 
+sair do ambiente de desenvolvimento e executar um comando específico. 
+    O comando será executado automaticamente assim que 
+você salvar o arquivo que estiver editando.
+
 ## Testes automatizados
 
-- Testes unitários;
-- Testes integrados;
-- Testes funcionais.
+- Testes unitários: testa a menor unidade do código;
+- Testes integrados: testão as pequenas integrações do código, ou seja integra pequenas partes do código;
+- Testes funcionais: testa a integração do sistema com outros sistema(s).
 
 ## Testes manuais e automatizados
 
@@ -22,18 +30,37 @@
 - Testes de segurança;
 - Mais...
 
-TDD (Test Driven Development)
+¨*TDD (Test Driven Development)
 
     É um dos pilares do Extreme Programing, consiste em testar e refatorar
 em pequenos ciclos, onde você escreve o teste antes do código, faz o mesmo
 passar e refatora o código.
+ 
+ Escrita do teste -> Escrita do código -> Refatora.
 
-### Vantagens
+    ### Vantagens
 
 - Feedback rápido;
 - Maior segurança em alterações e novas funcionalidades;
 - Código mais limpo.
 - Produtividade.
+
+* BDD (Behavior Driven Development)
+
+    Técnica de desenvolvimento ágil que visa regras de négocio com linguagens
+de programação.
+
+    ## Pilares
+
+- Testes;
+- Documentação;
+- Exemplos.
+
+    ### Vantagens
+
+- Commpartilhamento do conhecimento;
+- Documentação dinâmica;
+- Visão do todos.
 
 
 

@@ -1,0 +1,35 @@
+* Mocha
+
+    Mocha é um executor de teste. Isso significa apenas que é uma ferramenta que 
+executa / executa nossos testes. 
+    Os testes em si não são escritos em Mocha. 
+Outros executores de teste incluem; Jasmine, Jest.
+
+Explicação de alguns comandos
+
+Site: https://www.coisadeprogramador.com.br/escrevendo-seus-testes-unitarios-com-o-mocha-js/
+
+* Chai
+
+    Chai é uma biblioteca de asserções. Até agora, acabamos Assertde fazer afirmações e temos 
+uma ideia do que as afirmações fazem. 
+    Chai faz exatamente a mesma coisa, mas permite uma melhor legibilidade.
+
+Explicação de alguns comandos
+
+Site: https://code4coders.wordpress.com/2018/08/16/desenvolvendo-tdd-em-node-js-com-mocha-chai/
+
+* SinonJS
+
+    SinonJS fornece spies, stubs e simulações de teste autônomo. 
+Este é o mecanismo que usaremos para criar nossos espiões, stubs e mocks.
+
+Explicação de alguns comandos
+
+Site: https://sinonjs.org/
+
+Explicação geral do Mocha, Chai e SinonJS
+
+Site: https://scotch.io/tutorials/how-to-test-nodejs-apps-using-mocha-chai-and-sinonjs.
+
+
