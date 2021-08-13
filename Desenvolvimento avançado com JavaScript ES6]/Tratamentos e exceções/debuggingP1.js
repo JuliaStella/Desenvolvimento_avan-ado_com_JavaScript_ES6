@@ -6,8 +6,8 @@ console.error('Erro: Xpto');
 console.trace(); //saber onde está sendo executado o console.
 
 console.group('meu Grupo');
-console.log('Vai Curinthia');
-console.log('Palmeiras ainda não tem mundial...')
+console.log('Gol');
+console.log('Oxe...')
 console.groupEnd('meu Grupo');
 
 console.time('LogTime');
@@ -15,6 +15,6 @@ setTimeout(()=>{
   console.timeEnd('LogTime')
 },500);
 
-console.table(['Jonas broder','musica de genero duvidoso']);
+console.table(['obrigado','pode ter dois sentidos']);
 console.assert(1===0,'Ops, deu ruim');
 console.log('%c styled log','color:blue;');
